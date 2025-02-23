@@ -1,27 +1,32 @@
-const API_URL = " https://portfolio-website-q37u14fih-brian-honeas-projects.vercel.app"; // Replace with your deployed API
+const API_URL = "https://portfolio-seven-virid-30.vercel.app/#contact"; 
 
-async function sendMessage(event) {
-  event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
 
-  const formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
-  };
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await fetch(`${API_URL}/contact`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    const formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
 
-    const data = await response.json();
-    alert(data.message);
-  } catch (error) {
-    alert("Error sending message. Please try again.");
-  }
-}
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      alert(data.message);
+      form.reset();
+    } catch (error) {
+      alert("Error sending message. Please try again.");
+    }
+  });
+});
 
   
   function openModal(modalId) {
