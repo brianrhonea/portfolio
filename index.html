@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a data professional with a Master of Science in Business Analytics and Artificial Intelligence from The University of Texas at Dallas, transitioning from healthcare into data analytics, data science, and data engineering. My background in patient care and healthcare operations has shaped my problem-solving and communication skills, which I now apply to data-driven decision-making.
+        </p>
+      
+        <h3>Technical Expertise</h3>
+        <ul>
+          <li><strong>Programming & Data Science:</strong> Python, SQL, R, JavaScript</li>
+          <li><strong>Big Data & Cloud Technologies:</strong> Hadoop, Microsoft Azure, AWS, Google Cloud Platform, Databricks</li>
+          <li><strong>Data Visualization & Business Intelligence:</strong> Tableau, Power BI, Matplotlib</li>
+          <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
+        </ul>
+      
+        <h3>Work Experience</h3>
+        <p>
+          I have experience working as a <strong>Data Engineer Consultant</strong>, where I optimized data pipelines, automated workflows, and improved database efficiency using <strong>Python, Azure Data Factory, and SQL</strong>.  
+          Prior to that, I managed operations as a <strong>Front Office Manager & Technician</strong>, handling patient records and optimizing data systems.
+        </p>
+        <p>
+          I am passionate about turning raw data into actionable insights and continuously expanding my knowledge in <strong>data engineering, analytics, and visualization</strong>. Let’s connect!
+        </p>
+      </section>
+      
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+          <div class="project-box" onclick="openModal('modal1')">
+            <img src="assets/images/airbnb.jpg" alt="Project 1 Image" />
+            <h3>AirBnb Housing Prediction</h3>
+            <p>Conducted data analysis on an Airbnb dataset using pandas, scikit-learn, and matplotlib to identify market trends and optimize rental property investments. Delivered insights on high-yield investment locations, enhancing the decision-making process for property managers.</p>
+          </div>
+          <div class="project-box" onclick="openModal('modal2')">
+            <img src="assets/images/sql.jpg" alt="Project 2 Image" />
+            <h3>Carbon Emissions Database Design</h3>
+            <p>Created a project using automotive CO2 emission data from Kaggle. Created 15 tables and populated them. Explored the data using many joins, queries, functions, triggers, and procedures. Evaluated the performance and efficiency of the data given and came up with business solution to reduce emissions in car rentals.</p>
+          </div>
+          <div class="project-box" onclick="openModal('modal3')">
+            <img src="assets/images/stockmarket.jpg" alt="Project 3 Image" />
+            <h3>Stock Market Predictive Model</h3>
+            <p>Led a stock market prediction project using Python and Yahoo Finance API to gather historical stock data. Cleaned and preprocessed the data for machine learning, building a classification model to predict stock movement ("rise", "fall", "neutral"). </p>
+          </div>
+          <div class="project-box" onclick="openModal('modal4')">
+            <img src="assets/images/hadoop.jpg" alt="Project 4 Image" />
+            <h3>Hadoop Big Data Analysis</h3>
+            <p>Collaborated on a Big Data project leveraging the Hadoop ecosystem. Developed Python code to capture data via an API and communicate with an Apache Flume agent to store live stock data in HDFS. Queried the ingested data using Apache Hive for analysis.</p>
+          </div>
+        </div>
+      </section>
+<!-- Modal for Airbnb Housing Prediction -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>AirBnb Housing Prediction</h2>
+      <p>
+        Conducted data analysis on an Airbnb dataset using pandas, scikit-learn, and matplotlib to 
+        identify market trends and optimize rental property investments. Delivered insights on high-yield 
+        investment locations, enhancing the decision-making process for property managers.
+      </p>
+        <a href="https://github.com/brianrhonea/Airbnb_Python_Analysis" target="_blank" class="github-link">View on GitHub</a>
+    </div>
+  </div>
+  
+  <!-- Modal for Carbon Emissions Database -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Carbon Emissions Database Design</h2>
+      <p>
+        Created a project using automotive CO2 emission data from Kaggle. Designed a relational database 
+        with 15 tables and populated them with structured data. Executed complex SQL queries, 
+        functions, triggers, and procedures to analyze the data, providing business insights for 
+        reducing emissions in car rentals.
+      </p>
+        <a href="https://github.com/brianrhonea/CarbonEmissionsDB" target="_blank" class="github-link">View on GitHub</a>
+    </div>
+  </div>
+  
+  <!-- Modal for Stock Market Prediction -->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>Stock Market Predictive Model</h2>
+      <p>
+        Led a stock market prediction project using Python and Yahoo Finance API to gather historical 
+        stock data. Cleaned and preprocessed the data for machine learning, then built a classification 
+        model to predict stock movement ("rise", "fall", "neutral"). 
+      </p>
+        <a href="https://github.com/brianrhonea/StockMarketPredictions" target="_blank" class="github-link">View on GitHub</a>
+    </div>
+  </div>
+  
+  <!-- Modal for Hadoop Big Data Analysis -->
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h2>Hadoop Big Data Analysis</h2>
+      <p>
+        Collaborated on a Big Data project leveraging the Hadoop ecosystem. Developed Python code 
+        to capture data via an API and communicate with an Apache Flume agent to store live stock 
+        data in HDFS. Queried the ingested data using Apache Hive for analysis.
+      </p>
+        <a href="https://github.com/brianrhonea/hadoop_big_data" target="_blank" class="github-link">View on GitHub/>
+    </div>
+  </div>
+  
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>
+         Download my resume:
+        <a href="BrianHoneaResume.pdf" download>Download Resume</a>
+        </p>
+    </section>
+      
+
+   
+    <section id="contact">
+        <h2>Contact</h2>
+            <form action="/submit" method="post">
+              <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              
+              <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              
+              <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+              </div>
+              
+              <button type="submit">Send Message</button>
+            </form>
+          </section>
+          
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
